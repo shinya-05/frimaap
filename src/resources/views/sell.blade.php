@@ -7,7 +7,7 @@
     {{ session('result') }}
   </div>
     @endif
-  <h2 class="main-ttl">会員登録</h2>
+  <h2 class="main-ttl">商品の出品</h2>
   <form action="/register" method="post">
     @csrf
     <div class="input-container">
@@ -39,9 +39,8 @@
       @enderror
     </div>
     <div class="btn-container">
-      <input type="submit" value="登録する">
+      <input type="submit" value="出品する">
     </div>
   </form>
-  <a class="transition-link" href="/login">ログインはこちら</a>
 </div>
 @endsection

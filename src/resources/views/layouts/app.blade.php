@@ -14,7 +14,7 @@
 <body class="container">
     @component('components.header')
     @endcomponent
-    <main class="main">
+    <main>
         @yield('main')
     </main>
 </body>
