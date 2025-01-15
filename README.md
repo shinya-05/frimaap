@@ -1,7 +1,7 @@
 #　アプリケーション名
 - coachtechフリマ
   ある企業が開発した独自のフリマアプリ
-  ![alt text](image.png)
+  ![alt text](https://github.com/shinya-05/frima/blob/main/src/image.png)
 
 ## 作成した目的
 - アイテムの出品と購入を行うためのフリマアプリを開発する
