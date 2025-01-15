@@ -17,7 +17,7 @@
         </div>
     @endif
 
-    <h2 class="main-ttl">商品の出品</h2>
+    <h1 class="main-ttl">商品の出品</h1>
     <form action="/sell" method="post" enctype="multipart/form-data">
         @csrf
         <div class="input-container">

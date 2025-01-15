@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="main-container">
-  <h2 class="main-ttl">ログイン</h2>
+  <h1 class="main-ttl">ログイン</h1>
   <form action="/login" method="post">
     @csrf
     <div class="input-container">

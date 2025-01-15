@@ -6,12 +6,7 @@
 
 @section('main')
 <div class="main-container">
-  @if (session('result'))
-  <div class="flash_message">
-  {{ session('result') }}
-  </div>
-  @endif
-  <h2 class="main-ttl">プロフィール設定</h2>
+  <h1 class="main-ttl">プロフィール設定</h1>
   <form action="{{ route('profile.complete') }}" method="post" >
   @csrf
     <div class="image-container">
