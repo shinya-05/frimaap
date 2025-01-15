@@ -17,12 +17,12 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('image_path')->nullable();
-            $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('condition_id');
             $table->string('title');
+            $table->string('brand');
             $table->text('description');
             $table->integer('price');
-            $table->enum('status', ['sale', 'sold']);
+            $table->enum('status', ['sale', 'sold'])->nullable();
             $table->timestamps();
         });
     }

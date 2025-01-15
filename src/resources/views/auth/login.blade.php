@@ -11,14 +11,14 @@
   <form action="/login" method="post">
     @csrf
     <div class="input-container">
-      <label class="input-container__label" for="name">メールアドレス</label>
+      <label class="input-container__label" for="email">メールアドレス</label>
       <input class="input-container__input" type="email" name="email" value="{{ old('email') }}">
       @error('email')
       <p>{{ $message }}</p>
       @enderror
     </div>
     <div class="input-container">
-      <label class="input-container__label" for="name">パスワード</label>
+      <label class="input-container__label" for="password">パスワード</label>
       <input class="input-container__input" type="password" name="password">
       @error('password')
       <p>{{ $message }}</p>

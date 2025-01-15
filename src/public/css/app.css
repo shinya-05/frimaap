@@ -17,8 +17,27 @@
     z-index: 999;
 }
 
+.header-logo {
+    margin-right: 70px;
+}
+
 .header__img {
     margin-left: 20px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-search__input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    height: 34px;
+    font-size: 24px;
 }
 
 .header-nav-list {
@@ -36,6 +55,14 @@
     font-size: 24px;
 }
 
+.header-nav__link {
+    color: #f2f2f2;
+    background-color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .header-nav-item:not(:last-child) {
     margin-right: 30px;
 }
@@ -49,6 +76,73 @@
 .header-nav-item__myp {
     color: #f2f2f2;
     text-decoration: none;
+}
+
+/* ---- PCサイズ（1400px〜1540px向け） ---- */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .header-search__input {
+        max-width: 450px;
+        /* 検索バーの幅を縮小 */
+    }
+
+    .header-nav-list {
+        gap: 15px;
+        /* ナビゲーションの間隔を少し狭める */
+    }
+
+    .header-nav__button,
+    .header-nav__link {
+        font-size: 14px;
+        /* フォントサイズを少し小さくする */
+    }
+}
+
+/* ---- タブレットサイズ（768px〜850px向け） ---- */
+@media (min-width: 768px) and (max-width: 850px) {
+    .header {
+        flex-wrap: wrap;
+        /* ヘッダー全体を折り返す */
+        height: auto;
+        /* 高さを自動調整 */
+        padding: 10px;
+        /* 上下左右に余白を追加 */
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+        /* ロゴの下に余白を追加 */
+    }
+
+    .header-search {
+        width: 100%;
+        /* 検索バーを幅いっぱいにする */
+        margin-bottom: 10px;
+        /* 下に余白を追加 */
+    }
+
+    .header-search__input {
+        max-width: none;
+        /* 検索バーの最大幅を解除 */
+        font-size: 14px;
+        /* フォントサイズを少し小さく */
+    }
+
+    .header-nav-list {
+        flex-wrap: wrap;
+        /* ナビゲーション項目を折り返す */
+        justify-content: center;
+        /* 中央揃え */
+        gap: 10px;
+        /* 項目間の間隔を調整 */
+    }
+
+    .header-nav__button,
+    .header-nav__link {
+        font-size: 14px;
+        /* フォントサイズを小さく */
+        padding: 5px 10px;
+        /* 内側の余白を小さく */
+    }
 }
 
 .header-nav-item__sale {
@@ -121,121 +215,10 @@
     text-decoration: none;
 }
 
-.flash_message {
-    margin-bottom: 50px;
-    padding: 10px 0;
-    background-color: #f2c0c1;
-}
-
-
-.tabs {
-    display: flex;
-    margin: 30px 0;
-    padding-left: 100px;
-    border-bottom: 1px solid black;
-    width: 100%;
-}
-
-.tab {
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    margin-left: 30px;
-}
-
-
-.tab:hover {
-    text-decoration: underline;
-}
-
-.welcome {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 .card-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.attendance-btn {
-    display: block;
-    background-color: #ffffff;
-    width: 48%;
-    padding: 80px 0;
-    margin-top: 30px;
-    font-weight: bold;
-    color: #000000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.inactive {
-    color: #e5e5e5;
-    cursor: default;
-}
-
-.date-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.date {
-    font-size: 24px;
-    margin: 0 20px;
-}
-
-.arrow {
-    background-color: #ffffff;
-    color: #214be0;
-    border: 1px solid #214be0;
-    text-decoration: none;
-    padding: 3px 10px;
-}
-
-table {
-    width: 100%;
-    margin-top: 40px;
-}
-
-th,
-td {
-    border-top: 1px solid #000000;
-    padding: 25px 0;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.pagination li {
-    display: inline;
-}
-
-.not-link {
-    padding: 8px 14px;
-    color: #214be0;
-    border: 1px solid #214be0;
-    background-color: #ffffff;
-}
-
-.pagination li a {
-    text-decoration: none;
-    padding: 8px 14px;
-    color: #214be0;
-    border: 1px solid #214be0;
-    background-color: #ffffff;
-}
-
-.pagination li a.active {
-    background-color: #214be0;
-    color: #ffffff;
-}
 

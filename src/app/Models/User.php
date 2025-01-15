@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -53,17 +54,12 @@ class User extends Authenticatable
 
     public function orders()
     {
-        return $this->hasMany(Order::class, 'buyer_id');
-    }
-
-    public function soldOrders()
-    {
-        return $this->hasMany(Order::class, 'seller_id');
+        return $this->hasMany(Order::class);
     }
 
     public function favorites()
     {
-        return $this->hasMany(Favorite::class);
+        return $this->belongsToMany(Item::class, 'favorites', 'user_id', 'item_id');
     }
 
     public function comments()
@@ -71,8 +67,8 @@ class User extends Authenticatable
         return $this->hasMany(comment::class);
     }
 
-    public function shippingAddresses()
+    public function getProfileImageAttribute($value)
     {
-        return $this->hasMany(ShippingAddress::class);
+        return $value ?? 'default-profile.jpeg' ;
     }
 }

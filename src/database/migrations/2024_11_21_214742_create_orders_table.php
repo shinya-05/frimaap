@@ -16,11 +16,11 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('item_id');
-            $table->unsignedBigInteger('buyer_id');
-            $table->unsignedBigInteger('seller_id');
-            $table->unsignedBigInteger('payment_id');
-            $table->unsignedBigInteger('shipping_address_id');
-            $table->string('amount');
+            $table->unsignedBigInteger('user_id');
+            $table->string('payment_method')->nullable();
+            $table->string('postal_code');
+            $table->string('shipping_address');
+            $table->string('building_name')->nullable();
             $table->timestamps();
         });
     }

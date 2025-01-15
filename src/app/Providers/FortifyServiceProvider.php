@@ -29,6 +29,7 @@ class FortifyServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Fortify::createUsersUsing(CreateNewUser::class);
+        $this->app->singleton(CreatesNewUsers::class, CreateNewUser::class);
         //Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         //Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         //Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
@@ -49,6 +50,10 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::loginView(function () {
             return view('auth.login');
+        });
+
+        Fortify::verifyEmailView(function(){
+            return view('auth.verify-email');
         });
 
         RateLimiter::for('login', function (Request $request) {
