@@ -17,12 +17,14 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->unsignedBigInteger('item_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('payment_method')->nullable();
+            $table->string('payment_method');
             $table->string('postal_code');
             $table->string('shipping_address');
             $table->string('building_name');
             $table->timestamps();
         });
+
+        \Illuminate\Support\Facades\DB::statement("ALTER TABLE `orders` MODIFY `payment_method` ENUM('クレジットカード', 'コンビニ払い')");
     }
 
     /**

@@ -2,11 +2,6 @@
 
 @section('main')
 <div class="main-container">
-    @if (session('result'))
-  <div class="flash_message">
-    {{ session('result') }}
-  </div>
-    @endif
   <h2 class="main-ttl">ログイン</h2>
   <form action="/login" method="post">
     @csrf

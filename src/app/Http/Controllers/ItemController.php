@@ -15,8 +15,7 @@ class ItemController extends Controller
 {
     public function index(Request $request)
 {
-    // クエリパラメータ "page" を取得
-    $page = $request->input('page', 'home'); // デフォルトは "home"
+    $page = $request->input('page', 'home'); 
 
     // 初期クエリを作成
     $query = Item::query();
@@ -52,7 +51,7 @@ class ItemController extends Controller
         ]);
 
         return redirect()->route('show', $item->id);
-        //ルートモデルバインディング により、{item} の値が Item モデルを使って自動的に $item に渡される。
+    
     }
 
     //お気に入り機能
@@ -61,7 +60,6 @@ class ItemController extends Controller
         $user = Auth::user();
 
         if ($user->favorites()->where('item_id', $item->id)->exists()) {
-            //中間テーブルで商品IDが存在するか確認
             $user->favorites()->detach($item->id);
             //お気に入り解除
             $isFavorited = false;
@@ -78,9 +76,8 @@ class ItemController extends Controller
     public function show($id)  //$idはルートから渡されるパラメータ
     {
         $item = Item::with('categories', 'condition')->findOrFail($id);
-        //itemsテーブルからIDが一致するか確認
         $comments = Comment::where('item_id', $id)->with('user')->get();
-        //idが一致するか確認、ユーザーも
+        
 
         return view('item', compact('item', 'comments'));
     }

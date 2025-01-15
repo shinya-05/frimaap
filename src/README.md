@@ -1,7 +1,7 @@
 #　アプリケーション名
 - coachtechフリマ
   ある企業が開発した独自のフリマアプリ
-  ![alt text](<スクリーンショット 2024-10-27 22.51.29.png>)
+  ![alt text](image.png)
 
 ## 作成した目的
 - アイテムの出品と購入を行うためのフリマアプリを開発する
@@ -17,11 +17,8 @@
 - Laravel8.83.27
 - MySQL8.0.26
 
-## テーブル設計
-- ![alt text](image-1.png)
-
 ## ER図
-- ![alt text](image-2.png)
+- ![alt text](image-1.png)
 
 
 ## 環境構築

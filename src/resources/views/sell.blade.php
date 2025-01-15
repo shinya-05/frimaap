@@ -6,12 +6,6 @@
 
 @section('main')
 <div class="main-container">
-    @if (session('result'))
-        <div class="flash_message">
-            {{ session('result') }}
-        </div>
-    @endif
-
     <!-- バリデーションエラーの表示 -->
     @if ($errors->any())
         <div class="alert alert-danger">

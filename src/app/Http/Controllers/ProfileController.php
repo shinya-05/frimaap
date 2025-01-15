@@ -29,11 +29,9 @@ class ProfileController extends Controller
         // 画像の保存処理
 
         if ($request->hasFile('profile_image')) {
-            //リクエストの中に画像があるかチェックするメソッド
             $imagePath = $request->file('profile_image')->store('profile_images', 'public');
-            //アップロードされた画像がstorage/app/public/profile_imagesに保存
             $user->profile_image = $imagePath;
-            //userのカラムに保存
+
         }
         // ユーザー情報の更新
 
@@ -41,9 +39,7 @@ class ProfileController extends Controller
         $user->postal_code = $request->input('postal_code');
         $user->address = $request->input('address');
         $user->building_name = $request->input('building_name');
-        //それぞれ入力した内容を保存
         $user->profile_completed = true;
-        //プロフィール設定が完了したことを示す、ミドルウェアで使用
         $user->save();
 
         return redirect()->route('home');
