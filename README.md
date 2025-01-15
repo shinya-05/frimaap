@@ -18,7 +18,7 @@
 - MySQL8.0.26
 
 ## ER図
-- ![alt text](image-1.png)
+- ![alt text](https://github.com/shinya-05/frima/blob/main/src/image-1.png)
 
 
 ## 環境構築
