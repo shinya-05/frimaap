@@ -28,7 +28,7 @@
         <div class="tab-active" id="sold-items">
             @forelse ($soldItems as $item)
                 <div class="item-card">
-                    <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->title }}">
+                    <img src="{{ Str::startsWith($item->image_path, 'http') ? $item->image_path : asset('storage/' . $item->image_path ?? 'default-image.png') }}" alt="商品画像">
                     <h3>{{ $item->title }}</h3>
                 </div>
             @empty
@@ -42,7 +42,7 @@
         <div class="tab-active" id="purchased-items">
             @forelse ($purchasedItems as $item)
                 <div class="item-card">
-                    <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->title }}">
+                    <img src="{{ Str::startsWith($item->image_path, 'http') ? $item->image_path : asset('storage/' . $item->image_path ?? 'default-image.png') }}" alt="商品画像">
                     <h3>{{ $item->title }}</h3>
                 </div>
             @empty
