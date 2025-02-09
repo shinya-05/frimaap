@@ -61,7 +61,6 @@ MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
-``` text
 5. アプリケーションキーの作成
 ``` bash
 php artisan key:generate
