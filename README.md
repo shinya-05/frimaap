@@ -61,6 +61,11 @@ MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
+``` text
+STRIPE_SECRET_KEY=sk_test_51QggNIFTdZQyVkxrGOHr504Av6o7iXHEICt7l0XRRC61uQHsuRrX98qpSIcuxM95Fiwjd9TE7AkCWi797X4vaEkx00GzGNWEAH
+STRIPE_PUBLIC_KEY=pk_test_51QggNIFTdZQyVkxrrlkyTBT2F6z9K2zcdXPG3zIfecz52w1AE3H3wKmdq1vknh5e6seyuV94KEnntQnuADQnHO3m00UWXF14Kr
+```
+
 5. アプリケーションキーの作成
 ``` bash
 php artisan key:generate
