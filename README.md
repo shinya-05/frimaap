@@ -87,8 +87,8 @@ php artisan storage:link
 ```
 storage/app/publicにproduct_imagesとprofile_imagesディレクトリを作成
 storage/app/publicに下記画像を保存
-![alt text](https://github.com/shinya-05/frima/blob/main/src/storage/app/public/default-item.png)
+![alt text](https://github.com/shinya-05/frima/blob/main/src/default-item.png)
 
-![alt text](https://github.com/shinya-05/frima/blob/main/src/storage/app/public/default-profile.png)
+![alt text](https://github.com/shinya-05/frima/blob/main/src/default-profile.png)
 
 
