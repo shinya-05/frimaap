@@ -23,7 +23,7 @@
 
 ## 環境構築
 **Dockerビルド**
-1. `git clone git@github.com:shinya-05/frima.git`
+1. `git clone git@github.com:shinya-05/frimaap.git`
 2. DockerDesktopアプリを立ち上げる
 3. `docker-compose up -d --build`
 
