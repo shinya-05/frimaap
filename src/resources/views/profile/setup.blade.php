@@ -7,7 +7,7 @@
 @section('main')
 <div class="main-container">
   <h1 class="main-ttl">プロフィール設定</h1>
-  <form action="{{ route('profile.complete') }}" method="post" >
+  <form action="{{ route('profile.complete') }}" method="post" enctype="multipart/form-data">
   @csrf
     <div class="image-container">
       <div class="profile-image">
