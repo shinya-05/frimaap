@@ -20,6 +20,11 @@ class ItemController extends Controller
     // 初期クエリを作成
     $query = Item::query();
 
+    // **自分が出品した商品を除外**
+    if (Auth::check()) {
+        $query->where('user_id', '!=', Auth::id());
+    }
+
     // マイリストの場合
     if ($page === 'mylist' && Auth::check()) {
         $query->whereHas('favoritedBy', function ($q) {
