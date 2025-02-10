@@ -86,4 +86,6 @@ php artisan db:seed
 php artisan storage:link
 ```
 storage/app/publicにproduct_imagesとprofile_imagesディレクトリを作成
+storage/app/publicに下記画像を保存
+
 
