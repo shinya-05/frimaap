@@ -80,3 +80,10 @@ php artisan migrate
 ``` bash
 php artisan db:seed
 ```
+
+8. storageディレクトリをpublicに公開
+``` bash
+php artisan storage:link
+```
+storage/app/publicにproduct_imagesとprofile_imagesディレクトリを作成
+
