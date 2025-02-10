@@ -1,7 +1,7 @@
 #　アプリケーション名
 - coachtechフリマ
   ある企業が開発した独自のフリマアプリ
-  ![alt text](https://github.com/shinya-05/frima/blob/main/src/image.png)
+  ![alt text](https://github.com/shinya-05/frimaap/blob/main/src/image.png)
 
 ## 作成した目的
 - アイテムの出品と購入を行うためのフリマアプリを開発する
@@ -18,7 +18,7 @@
 - MySQL8.0.26
 
 ## ER図
-- ![alt text](https://github.com/shinya-05/frima/blob/main/src/image-1.png)
+- ![alt text](https://github.com/shinya-05/frimaap/blob/main/src/image-1.png)
 
 
 ## 環境構築
@@ -87,8 +87,8 @@ php artisan storage:link
 ```
 storage/app/publicにproduct_imagesとprofile_imagesディレクトリを作成
 storage/app/publicに下記画像を保存
-![alt text](https://github.com/shinya-05/frima/blob/main/src/default-item.png)
+![alt text](https://github.com/shinya-05/frimaap/blob/main/src/default-item.png)
 
-![alt text](https://github.com/shinya-05/frima/blob/main/src/default-profile.png)
+![alt text](https://github.com/shinya-05/frimaap/blob/main/src/default-profile.png)
 
 
