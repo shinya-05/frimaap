@@ -10,7 +10,7 @@
 - 作成中
 
 ## 機能一覧
-- 登録認証機能、ログイン認証機能、メール認証機能、ログアウト機能、商品の出品購入機能、商品検索機能、コメント送信機能、いいね機能、配送先変更機能、ユーザー情報変更機能、
+- 登録認証機能、ログイン認証機能、メール認証機能、ログアウト機能、商品の出品購入機能、商品検索機能、コメント送信機能、いいね機能、配送先変更機能、ユーザー情報変更機能、取引機能、チャット機能、ユーザー評価機能
 
 ## 使用技術(実行環境)
 - PHP8.3.0
@@ -85,11 +85,12 @@ php artisan db:seed
 ``` bash
 php artisan storage:link
 ```
-storage/app/publicにproduct_imagesとprofile_imagesディレクトリを作成
+storage/app/publicにchat_imagesとproduct_imagesとprofile_imagesディレクトリを作成
 
 storage/app/publicに下記画像を保存
 ![alt text](https://github.com/shinya-05/frimaap/blob/main/src/default-item.jpg)
 
 ![alt text](https://github.com/shinya-05/frimaap/blob/main/src/default-profile.jpeg)
 
+![alt text](https://github.com/shinya-05/frimaap/blob/main/src/plane-icon.jpg)
 
