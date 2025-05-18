@@ -30,7 +30,7 @@ class Item extends Model
 
     public function orders()
     {
-        return $this->hasOne(Order::class);
+        return $this->hasMany(Order::class);
     }
 
     public function favoritedBy()
@@ -42,6 +42,17 @@ class Item extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function messages()
+    {
+        return $this->hasMany(TradeMessage::class);
+    }
+
+    public function evaluations()
+    {
+        return $this->hasMany(Evaluation::class);
+    }
+
 
     public function getImagePathAttribute($value)
     {

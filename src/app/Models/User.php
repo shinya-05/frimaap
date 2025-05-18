@@ -67,6 +67,16 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(comment::class);
     }
 
+    public function evaluationsReceived()
+    {
+        return $this->hasMany(Evaluation::class, 'evaluated_id');
+    }
+
+    public function getAverageScoreAttribute()
+    {
+        return round($this->evaluationsReceived()->avg('score') ?? 0, 1);
+    }
+
     public function getProfileImageAttribute($value)
     {
         return $value ?? 'default-profile.jpeg' ;

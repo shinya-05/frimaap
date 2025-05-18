@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemsTable extends Migration
+class CreateTradeMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('trade_messages', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('item_id');
             $table->unsignedBigInteger('user_id');
+            $table->text('message')->nullable();
             $table->string('image_path')->nullable();
-            $table->unsignedBigInteger('condition_id');
-            $table->string('title');
-            $table->string('brand');
-            $table->text('description');
-            $table->integer('price');
-            $table->enum('status', ['sale', 'sold', 'trading'])->nullable();
+            $table->boolean('is_read')->default(false);
             $table->timestamps();
         });
     }
@@ -34,6 +31,6 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('messages');
     }
 }

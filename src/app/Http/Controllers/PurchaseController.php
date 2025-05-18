@@ -71,7 +71,7 @@ class PurchaseController extends Controller
         );
 
         // 商品のステータスを「sold」に更新
-        $item->update(['status' => 'sold']);
+        $item->update(['status' => 'trading']);
 
         return redirect()->route('home');
     }

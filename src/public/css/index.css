@@ -6,6 +6,15 @@
     width: 100%;
 }
 
+.badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
 .nav-link {
     padding: 10px 20px;
     text-decoration: none;
@@ -62,3 +71,4 @@
 .item-card h3:hover {
     text-decoration: underline;
 }
+

@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MypageController;
 use App\Http\Controllers\PurchaseController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\TradeController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,14 @@ Route::middleware('auth', 'verified', 'first.login')->group(function () {
     Route::post('/purchase/:{item}', [PurchaseController::class, 'store'])->name('purchase.store');
     Route::get('/purchase/address/:{item}', [PurchaseController::class, 'editAddress'])->name('purchase.addressEdit');
     Route::post('/purchase/address/:{item}', [PurchaseController::class, 'updateAddress'])->name('purchase.updateAddress');
+    
+    Route::get('/trade/{item}', [TradeController::class, 'show'])->name('trade.show');
+    Route::post('/trade/{item}/message', [TradeController::class, 'storeMessage'])->name('trade.message');
+    Route::post('/trade/{item}/complete', [TradeController::class, 'complete'])->name('trade.complete');
+    Route::post('/trade/message/{message}/update', [TradeController::class, 'update'])->name('trade.message.update');
+    Route::delete('/trade/message/{message}', [TradeController::class, 'destroy'])->name('trade.message.destroy');
+    Route::post('/trade/{item}/evaluate', [TradeController::class, 'storeEvaluation'])->name('trade.evaluate');
+
 
 
 });

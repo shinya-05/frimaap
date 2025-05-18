@@ -42,6 +42,25 @@
     transition: background-color 0.3s ease;
 }
 
+.star {
+    font-size: 24px;
+    color: #ccc;
+}
+
+.star.filled {
+    color: #fdd835;
+    /* 黄色 */
+}
+
+.star.filled-half::before {
+    content: '★';
+    color: #fdd835;
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
 .nav-tabs {
     display: flex;
     margin: 30px 0;
@@ -107,4 +126,82 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.message-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.tab-badge {
+    background-color: red;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image img {
+        margin: 0;
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .profile-info h2 {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    .profile-info .btn {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .item-card {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+
+    .item-card img {
+        height: 200px;
+    }
+
+    .item-card h3 {
+        font-size: 20px;
+    }
 }

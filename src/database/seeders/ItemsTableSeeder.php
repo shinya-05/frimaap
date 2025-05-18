@@ -79,7 +79,7 @@ class ItemsTableSeeder extends Seeder
                 'description' => '高音質のレコーディング用マイク',
                 'image_path' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Music+Mic+4632231.jpg',
                 'condition_id' => 1, // 目立った傷や汚れなし
-                'user_id' => 1,
+                'user_id' => 2,
                 'status' => 'sale',
                 'brand' => 'ホシデン',
                 'created_at' => now(),
@@ -91,7 +91,7 @@ class ItemsTableSeeder extends Seeder
                 'description' => 'おしゃれなショルダーバッグ',
                 'image_path' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Purse+fashion+pocket.jpg',
                 'condition_id' => 3, // やや傷や汚れあり
-                'user_id' => 1,
+                'user_id' => 2,
                 'status' => 'sale',
                 'brand' => 'ルイ・ヴィトン',
                 'created_at' => now(),
@@ -103,7 +103,7 @@ class ItemsTableSeeder extends Seeder
                 'description' => '使いやすいタンブラー',
                 'image_path' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Tumbler+souvenir.jpg',
                 'condition_id' => 4, // 状態が悪い
-                'user_id' => 1,
+                'user_id' => 2,
                 'status' => 'sale',
                 'brand' => 'バカラ',
                 'created_at' => now(),
@@ -115,7 +115,7 @@ class ItemsTableSeeder extends Seeder
                 'description' => '手動のコーヒーミル',
                 'image_path' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Waitress+with+Coffee+Grinder.jpg',
                 'condition_id' => 2, // 良好
-                'user_id' => 1,
+                'user_id' => 2,
                 'status' => 'sale',
                 'brand' => '雪印',
                 'created_at' => now(),
@@ -127,7 +127,7 @@ class ItemsTableSeeder extends Seeder
                 'description' => '便利なメイクアップセット',
                 'image_path' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/%E5%A4%96%E5%87%BA%E3%83%A1%E3%82%A4%E3%82%AF%E3%82%A2%E3%83%83%E3%83%95%E3%82%9A%E3%82%BB%E3%83%83%E3%83%88.jpg',
                 'condition_id' => 1, // 目立った傷や汚れなし
-                'user_id' => 1,
+                'user_id' => 2,
                 'status' => 'sale',
                 'brand' => 'CHANEL',
                 'created_at' => now(),
