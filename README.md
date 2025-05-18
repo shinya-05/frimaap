@@ -94,3 +94,22 @@ storage/app/publicに下記画像を保存
 
 ![alt text](https://github.com/shinya-05/frimaap/blob/main/src/plane-icon.jpg)
 
+## ダミーデータ
+- 商品データ
+
+CO01	腕時計
+CO02	HDD
+CO03	玉ねぎ3束
+CO04	革靴
+CO05	ノートPC
+CO06	マイク
+CO07	ショルダーバッグ
+CO08	タンブラー
+CO09	コーヒーミル
+CO10	メイクセット
+
+- ユーザーデータ
+
+山田太郎 　CO01〜CO05を出品
+佐藤花子　 CO06〜CO10を出品
+田中一郎   出品なし
