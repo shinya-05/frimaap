@@ -85,7 +85,6 @@ class TradeController extends Controller
     {
         $request->validate([
             'score' => 'required|integer|min:1|max:5',
-            'comment' => 'nullable|string|max:1000',
         ]);
 
         $evaluatorId = auth()->id();
@@ -108,7 +107,6 @@ class TradeController extends Controller
             'evaluator_id' => $evaluatorId,
             'evaluated_id' => $evaluatedId,
             'score' => $request->score,
-            'comment' => $request->comment,
         ]);
 
     // ✅ 正しい相手にメールを送信

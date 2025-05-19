@@ -11,7 +11,6 @@ class Evaluation extends Model
         'evaluator_id',
         'evaluated_id',
         'score',
-        'comment',
     ];
 
     // リレーション（例：評価されたユーザー）

@@ -19,7 +19,6 @@ class CreateEvaluationsTable extends Migration
             $table->unsignedBigInteger('evaluator_id');   // 評価する人（購入者 or 出品者）
             $table->unsignedBigInteger('evaluated_id');   // 評価される人
             $table->unsignedTinyInteger('score');         // 1〜5
-            $table->text('comment')->nullable();
             $table->timestamps();
 
             $table->unique(['item_id', 'evaluator_id']);  // 同じ人が同じ取引を2度評価できないよう制限
