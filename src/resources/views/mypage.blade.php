@@ -28,6 +28,8 @@
                 @endif
             @endfor
         </div>
+    </div>
+    <div class="edit-button">
         <a href="{{ route('profile.setup') }}" class="btn btn-outline-primary">プロフィールを編集</a>
     </div>
 </div>
